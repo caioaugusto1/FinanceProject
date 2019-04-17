@@ -1,0 +1,29 @@
+<%- include ../layouts/header.ejs %>
+
+<% if(messages.error){ %>
+
+    <p style="color: red"><% - messages.error %></p>
+
+<% } %>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+
+    <% if(data){ %>{
+        <% data.forEach(function(paymenttype){ %>
+           <tr>
+               <td><%= paymenttype.name %></td>
+               <td><%= paymenttype.description %></td>
+           </tr> 
+        });
+    }
+        <% }) %>
+    <% }) %>
+
+</table>
+
+<%- include ../layouts/footer.ejs %>
