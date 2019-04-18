@@ -16,13 +16,25 @@ app.use('/', index);
 app.use('/paymenttype', paymentType);
 
 app.set('views', __dirname + '/views');
-//app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/views'));
+
+app.use(express.static(__dirname + '/views/themebootstrap'));
+
+// app.use(express.static(__dirname + '/views/themebootstrap/vendor'));
+
+// app.use(express.static(__dirname + '/views/themebootstrap/vendor/bootstrap'));
+
+// app.use(express.static(__dirname + '/views/themebootstrap/vendor/bootstrap/css'));
+
+// app.set('fontawesome-free', __dirname + '/views/themebootstrap/vendor/fontawesome-free');
+// app.use(express.static(__dirname + '/views/themebootstrap/vendor/fontawesome-free'));
 
 app.set('view engine', 'ejs');
 
 app.listen(port, () => {
     console.log('Express server is running at PORT: ' + port);
 });
+
 
 
 
