@@ -1,13 +1,38 @@
 'use strict';
+const dbConnection = require('../context/databaseContext');
+const uuidv1 = require('uuid/v1');
 
-const express = require('express');
-const router = express.Router();
-const controller = require('../controllers/paymenttype.controller');
+module.exports = function(app){
 
-router.get('/', controller.get);
+    app.get('/paymenttype/', function(req, res, next){
+        
+        dbConnection.query('SELECT * FROM paymentType', (err, result, fields) => {
+            if(!err){
+                res.status(200).json({
+                    data: result
+                }).send();
 
-router.get('/create', controller.getCreate);
+            }else{
+                console.log(err);
+            }   
+        });
+        
+        dbConnection.end();
+    });
 
-router.post('/', controller.post);
+    app.post('/paymenttype/create', function(req, res, next){
+        
+        dbConnection.query('SELECT * FROM paymentType', (err, result, fields) => {
+            if(!err){
+                res.status(200).json({
+                    data: result
+                }).send();
 
-module.exports = router;
+            }else{
+                console.log(err);
+            }   
+        });
+        
+        dbConnection.end();
+    });
+}
