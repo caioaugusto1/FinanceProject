@@ -2,9 +2,11 @@
 
 const express = require('express');
 const router = express.Router();
-const controller = require('../controller/paymenttype.controller');
+const controller = require('../controllers/paymenttype.controller');
 
 router.get('/', controller.get);
+
+router.get('/create', controller.getCreate);
 
 router.post('/', controller.post);
 
