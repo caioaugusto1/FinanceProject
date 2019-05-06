@@ -18,18 +18,23 @@
   },
   "homepage": "https://github.com/caioaugusto1/FinanceProject#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
     "dataformat": "^1.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-load": "^1.1.16",
+    "express-session": "^1.16.1",
     "express-validator": "^5.3.1",
+    "flash": "^1.1.0",
     "local-xmlhttprequest": "^2.0.0",
     "mysql": "^2.16.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "body-parser": "^1.19.0",
     "nodemon": "^1.18.11"
   }
 }

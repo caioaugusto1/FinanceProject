@@ -1,6 +1,6 @@
 let Util = function(){
 
-    function request(endpoint, type, param, dataType, callbackSuccess){
+    function request(endpoint, type, param, dataType, callbackSuccess, callbackError){
         
         $.ajax({
             url: endpoint, 
@@ -10,7 +10,7 @@ let Util = function(){
             success: function(data){
                 callbackSuccess(data);
             }, error: function(req, status, error){
-                console.log('ERRRRRRORRRR', error);
+                callbackError(req, status, error);
             }
         });
     };
