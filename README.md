@@ -2,7 +2,7 @@
 
 It's a project finance management, you can do a upload the your fiscal notes and get a exports
 
-[![Build Status]( )](https://github.com/caioaugusto1/FinanceProject.Core.git)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/caioaugusto1/MarketInter.Core.git)
 
 ### Development
 
